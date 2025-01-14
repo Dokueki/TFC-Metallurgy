@@ -21,8 +21,8 @@ public class TFCMetallurgy {
 
 	public static final Logger LOGGER = LogUtils.getLogger();
 
-	public TFCMetallurgy(FMLJavaModLoadingContext i) {
-		final IEventBus bus = i.getModEventBus();
+	public TFCMetallurgy() {
+		final IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		MetallurgyItems.ITEMS.register(bus);
 		MetallurgyBlocks.BLOCKS.register(bus);
 		MetallurgyFluids.FLUID_TYPES.register(bus);
